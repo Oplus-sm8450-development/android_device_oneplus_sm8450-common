@@ -116,6 +116,14 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             ${PATCHELF} --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        system_ext/etc/camera/mtCalibrationCfg.xml)
+            [ "$2" = "" ] && return 0
+            sed -i "s/-----/--/" "${2}"
+            ;;
+        system_ext/etc/camera/mwCalibrationCfg.xml)
+            [ "$2" = "" ] && return 0
+            sed -i "s/-----/--/" "${2}"
+            ;;
         *)
             return 1
             ;;
