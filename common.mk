@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+PRODUCT_PACKAGES += \
+    OplusDolby
+
 # Adreno
 TARGET_ADRENO_COMPONENT_VARIANT := adreno-s
 include $(QCOM_COMMON_PATH)/vendor/$(TARGET_ADRENO_COMPONENT_VARIANT)/qti-$(TARGET_ADRENO_COMPONENT_VARIANT).mk
@@ -363,7 +366,9 @@ SPAMMY_LOG_TAGS := \
     libsensor-ssccalapi \
     sensors \
     vendor.qti.hardware.display.composer-service \
-    vendor.xiaomi.sensor.citsensorservice@2.0-service
+    vendor.xiaomi.sensor.citsensorservice@2.0-service \
+    IRIS_LOG_SERV \
+    DisplayModeController
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \

@@ -73,7 +73,7 @@
         <point>1,-4950</point>
         <point>33,-3350</point>
         <point>66,-1700</point>
-        <point>100,0</point>
+        <point>100,500</point>
     </reference>
     <reference name="DEFAULT_DEVICE_CATEGORY_EXT_MEDIA_VOLUME_CURVE">
     <!-- Default is Ext Media System Volume Curve -->
