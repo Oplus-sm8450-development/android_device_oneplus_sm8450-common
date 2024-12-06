@@ -63,6 +63,24 @@ vendor.audio_hal.period_multiplier=3
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
+# Battery Saving
+persist.sys.shutdown.mode=hibernate
+persist.radio.add_power_save=1
+wifi.supplicant_scan_interval=220
+ro.ril.disable.power.collapse=1
+ro.config.hw_fast_dormancy=1
+ro.semc.enable.fast_dormancy=true
+ro.config.hw_quickpoweron=true
+ro.mot.eri.losalert.delay=1000
+pm.sleep_mode=1
+ro.ril.sensor.sleep.control=1
+power_supply.wakeup=enable
+ro.vendor.use_data_netmgrd=true
+ro.vold.umsdirtyratio=20
+power.saving.mode=1
+# Charger
+ro.charger.enable_suspend=true
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.idle_cur_ma=6
