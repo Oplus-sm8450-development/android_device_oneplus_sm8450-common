@@ -64,6 +64,8 @@ vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
 # Battery Saving
+wifi.supplicant_scan_interval=200
+pm.sleep_mode=1
 persist.sys.shutdown.mode=hibernate
 persist.radio.add_power_save=1
 wifi.supplicant_scan_interval=220
