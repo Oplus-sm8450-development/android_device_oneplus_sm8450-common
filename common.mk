@@ -360,15 +360,14 @@ SPAMMY_LOG_TAGS := \
     SRE \
     WifiHAL \
     cnss-daemon \
-    libcitsensorservice@2.0-impl \
     libsensor-displayalgo \
     libsensor-parseRGB \
     libsensor-ssccalapi \
     sensors \
     vendor.qti.hardware.display.composer-service \
-    vendor.xiaomi.sensor.citsensorservice@2.0-service \
     IRIS_LOG_SERV \
-    DisplayModeController
+    DisplayModeController \
+    android.hardware.power-service-qti
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
