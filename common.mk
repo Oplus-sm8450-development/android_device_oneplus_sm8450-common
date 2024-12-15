@@ -367,7 +367,14 @@ SPAMMY_LOG_TAGS := \
     vendor.qti.hardware.display.composer-service \
     IRIS_LOG_SERV \
     DisplayModeController \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
+    PAL: API \
+    PAL: StreamPCM \
+    PAL: SessionAlsaPcm \
+    PAL: ResourceManager \
+    DisplayManagerService \
+    DisplayRepository
+
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
