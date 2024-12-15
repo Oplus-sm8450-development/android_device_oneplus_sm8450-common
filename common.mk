@@ -368,12 +368,15 @@ SPAMMY_LOG_TAGS := \
     IRIS_LOG_SERV \
     DisplayModeController \
     android.hardware.power-service-qti \
-    PAL: API \
-    PAL: StreamPCM \
-    PAL: SessionAlsaPcm \
-    PAL: ResourceManager \
+    PAL:API \
+    PAL:StreamPCM \
+    PAL:SessionAlsaPcm \
+    PAL:ResourceManager \
+    PAL:Device \
     DisplayManagerService \
-    DisplayRepository
+    DisplayRepository \
+    Telephony \
+    CellBroadcastReceiver
 
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
