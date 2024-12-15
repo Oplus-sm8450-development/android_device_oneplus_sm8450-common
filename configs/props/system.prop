@@ -21,3 +21,5 @@ persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
 persist.log.tag.ultrasound_extn=S
 persist.log.tag.minksocket=S
+
+persist.sys.use_16bpp_alpha=1
