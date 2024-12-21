@@ -7,8 +7,6 @@
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
-QCOM_COMMON_PATH := device/qcom/common
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -31,10 +29,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     OplusDolby
-
-# Adreno
-TARGET_ADRENO_COMPONENT_VARIANT := adreno-s
-include $(QCOM_COMMON_PATH)/vendor/$(TARGET_ADRENO_COMPONENT_VARIANT)/qti-$(TARGET_ADRENO_COMPONENT_VARIANT).mk
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -287,6 +281,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk_platform.vendor \
     android.hardware.keymaster-V3-ndk_platform.vendor
+
+# Graphics
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.level-1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-1.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
+    frameworks/native/data/etc/android.software.opengles.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
+    frameworks/native/data/etc/android.software.vulkan.deqp.level-2021-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
 # Health
 PRODUCT_PACKAGES += \
