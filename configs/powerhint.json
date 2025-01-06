@@ -180,6 +180,15 @@
       ],
     },
     {
+      "Name": "UFSHCMinFreq",
+      "Path": "/sys/devices/platform/soc/1d84000.ufshc/devfreq/1d84000.ufshc/min_freq",
+      "Values": [
+        "300000000",
+        "75000000"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -276,6 +285,12 @@
       "Node": "L3MinFreq1",
       "Duration": 100,
       "Value": "825600"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UFSHCMinFreq",
+      "Duration": 1500,
+      "Value": "300000000"
     },
     {
       "PowerHint": "LAUNCH",
