@@ -289,7 +289,7 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "UFSHCMinFreq",
-      "Duration": 1500,
+      "Duration": 850,
       "Value": "300000000"
     },
     {
