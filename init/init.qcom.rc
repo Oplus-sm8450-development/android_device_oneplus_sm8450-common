@@ -425,6 +425,8 @@ on property:sys.boot_completed=1
     write /sys/devices/virtual/cvp/cvp/boot 1
 
     # Power hal
+    chown system system /sys/devices/platform/soc/1d84000.ufshc/devfreq/1d84000.ufshc/min_freq
+    chmod 0664 /sys/devices/platform/soc/1d84000.ufshc/devfreq/1d84000.ufshc/min_freq
     chown system system /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
     chown system system /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
     chown system system /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
