@@ -97,7 +97,7 @@ DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
 ODM_MANIFEST_FILES := $(COMMON_PATH)/configs/vintf/manifest_odm.xml
 
 # HWUI
-USE_OPENGL_RENDERER := true
+TARGET_USES_VULKAN = true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_oplus
