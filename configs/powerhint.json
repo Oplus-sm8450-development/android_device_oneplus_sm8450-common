@@ -88,7 +88,7 @@
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:silver/min_freq",
       "Values": [
         "3196000",
-        "1708000",
+        "1555000",
         "300000"
       ],
       "DefaultIndex": 2,
@@ -99,7 +99,29 @@
       "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold/min_freq",
       "Values": [
         "3196000",
-        "1708000",
+        "1555000",
+        "300000"
+      ],
+      "DefaultIndex": 2,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBWMinFreq2",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:prime-latfloor/min_freq",
+      "Values": [
+        "3196000",
+        "1555000",
+        "300000"
+      ],
+      "DefaultIndex": 2,
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBWMinFreq3",
+      "Path": "/sys/devices/system/cpu/bus_dcvs/DDR/soc:qcom,memlat:ddr:gold-compute/min_freq",
+      "Values": [
+        "3196000",
+        "1555000",
         "300000"
       ],
       "DefaultIndex": 2,
@@ -254,13 +276,25 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq0",
       "Duration": 100,
-      "Value": "1708000"
+      "Value": "1555000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq1",
       "Duration": 100,
-      "Value": "1708000"
+      "Value": "1555000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWMinFreq2",
+      "Duration": 100,
+      "Value": "1555000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBWMinFreq3",
+      "Duration": 100,
+      "Value": "1555000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -313,6 +347,18 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq1",
+      "Duration": 1000,
+      "Value": "3196000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBWMinFreq2",
+      "Duration": 1000,
+      "Value": "3196000"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBWMinFreq3",
       "Duration": 1000,
       "Value": "3196000"
     },
