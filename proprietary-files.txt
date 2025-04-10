@@ -799,10 +799,6 @@ odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishalwrapper.so
 
-# IRQ balance
-vendor/bin/msm_irqbalance
-vendor/etc/msm_irqbalance.conf
-
 # Kernel
 vendor/bin/init.kernel.post_boot-cape.sh
 vendor/bin/init.qti.kernel.sh
