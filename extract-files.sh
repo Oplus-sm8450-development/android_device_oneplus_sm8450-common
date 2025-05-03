@@ -119,10 +119,6 @@ function blob_fixup() {
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony)/d" "${2}"
             sed -i "s/media_codecs_vendor_audio/media_codecs_dolby_audio/" "${2}"
             ;;
-        vendor/etc/msm_irqbalance.conf)
-            [ "$2" = "" ] && return 0
-            sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
-            ;;
         vendor/lib64/libstagefright_soft_ddpdec.so | vendor/lib64/libdlbdsservice.so | \
         vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
             [ "$2" = "" ] && return 0
