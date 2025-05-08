@@ -116,13 +116,7 @@ function blob_fixup() {
             ;;
         vendor/etc/media_codecs.xml|vendor/etc/media_codecs_taro.xml|vendor/etc/media_codecs_taro_vendor.xml)
             [ "$2" = "" ] && return 0
-            sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony)/d" "${2}"
-            sed -i "s/media_codecs_vendor_audio/media_codecs_dolby_audio/" "${2}"
-            ;;
-        vendor/lib64/libstagefright_soft_ddpdec.so | vendor/lib64/libdlbdsservice.so | \
-        vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
-            [ "$2" = "" ] && return 0
-            ${PATCHELF} --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|vendor_audio)/d" "${2}"
             ;;
         vendor/etc/seccomp_policy/qwesd@2.0.policy)
             [ "$2" = "" ] && return 0
